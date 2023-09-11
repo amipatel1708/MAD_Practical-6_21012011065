@@ -18,8 +18,10 @@ class MainActivity : AppCompatActivity() {
         val stop = findViewById<Button>(R.id.stop_button)
         stop.setOnClickListener (){
             Intent(applicationContext,MyService::class.java).putExtra(MyService.PLAYERCONSTANT,"fhg").apply {
-                startService(this)
+                stopService(this)
             }
         }
     }
 }
+
+

@@ -9,30 +9,28 @@ class MyService : Service() {
     companion object{
         val PLAYERCONSTANT="play/pause"
     }
+    lateinit var player: MediaPlayer
     override fun onBind(intent: Intent): IBinder {
         TODO("Return the communication channel to the service.")
     }
-    lateinit var player: MediaPlayer
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (!this::player.isInitialized)
         {
             player=MediaPlayer.create(this,R.raw.song)
         }
-        if (intent != null)
-        {
-            val command= intent.getStringExtra(PLAYERCONSTANT)
-            if (!player.isPlaying)
-            {
-                player.start()
-            }
-            else
-            {
-                player.pause()
+        if (intent != null) {
+            val str = intent.getStringExtra(PLAYERCONSTANT)
+            if (str == PLAYERCONSTANT) {
+                if (player.isPlaying) {
+                    player.pause()
+                } else {
+                    player.start()
+                }
             }
         }
         else
         {
-            player.stop()
+            player.start()
         }
         return START_STICKY
     }
