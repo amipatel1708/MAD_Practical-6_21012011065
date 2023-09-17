@@ -1,10 +1,8 @@
 package com.amipatel.mad_practical_6_21012011065
-
 import android.app.Service
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.IBinder
-
 class MyService : Service() {
     companion object{
         val PLAYERCONSTANT="play/pause"
@@ -32,7 +30,6 @@ class MyService : Service() {
         }
         return START_STICKY
     }
-
     override fun onDestroy() {
         player.stop()
         super.onDestroy()

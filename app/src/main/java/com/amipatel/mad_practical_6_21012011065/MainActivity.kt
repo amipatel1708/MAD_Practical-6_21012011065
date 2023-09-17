@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun pause(){
         Intent(applicationContext,MyService::class.java).putExtra(MyService.PLAYERCONSTANT,"agx").apply {
-            startService(this)
+            stopService(this)
         }
     }
 }
