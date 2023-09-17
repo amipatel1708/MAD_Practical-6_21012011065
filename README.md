@@ -1,4 +1,4 @@
-![Dark_Music_App](https://github.com/amipatel1708/MAD_Practical-6_21012011065/assets/139481113/0d9f4134-4bc7-4852-821a-e727f7f16a15)# MAD_Practical-6_21012011065
+# MAD_Practical-6_21012011065
 
 # Study: 
 Service, Types of Service, Drawable Icon Add in project, MediaPlayer, Add Raw folder, Add mp3 song in raw folder
@@ -42,4 +42,5 @@ Regardless of whether your service is started, bound, or both, any application c
 
 * DARK THEME
   
-![Uploading Dark_Music_App.jpg…]()
+![Dark_Music_App](https://github.com/amipatel1708/MAD_Practical-6_21012011065/assets/139481113/0d9f4134-4bc7-4852-821a-e727f7f16a15)
+
